@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        id="vp" />
+    <title>{{data.theme_data.rich_text}}</title>
+    <meta name="description" content="{{data.theme_data.rich_text}}" />
+    <link rel="stylesheet" href="../../static/js/share/share.min.css">
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/info.css">
+    <script src="../../static/js/jquery-1.10.2.js"></script>
+    <script src="../../static/js/iscroll/iscroll-probe.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                易得资讯 
+            </div>
+            <div class="time" id="datetime1"> 
+                {{data.theme_data.theme_time}}
+            </div>
+            <div class="fengxiang">
+                <img src="../../static/images/fenxiang.svg" />
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="text" id="rich_text1"> 
+                {{data.theme_data.rich_text}}
+            </div>
+            {% if data.theme_data.img %}
+                <div class="imgs" id="img1">
+                    <img  src="{{data.theme_data.img_data}}" onerror="this.style.display='none'"/>
+                </div>
+            {% endif %}
+           
+            <div class="sharePanel">
+                分享到：<div id="share"></div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="fengxiangModal" id="fengxiangModal2">
+    </div>
+    <div class="fengxiangModal" id="fengxiangModal">
+
+        <div class="imgbody" id="imgbody">
+            <div class="head" id="imghead">
+                <img src="../../static/images/logo2.png" />
+            </div>
+            <div class="content" id="imgcontent">
+                <div>
+                    <div class="card">
+                        <div class="time">
+                            <label>
+                                易得快讯
+                            </label>
+                            <label id="datetime2"> 
+                                {{data.theme_data.theme_time}}
+                            </label>
+                        </div>
+                        <div class="str"  id="rich_text2"> 
+                            {{data.theme_data.rich_text}}
+                        </div>  
+                    </div>
+                    <div class="footer">
+                        <div>
+                            长按二维码快速体验<br />
+                            官网登录1999data.com
+                        </div>
+
+                        <img class="QRcode" src="../../static/images/QRcode.png" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body> 
+<script type="text/javascript" src="../../static/js/common.js"></script>
+<script type="text/javascript" src="../../static/js/share/jquery.share.min.js"></script>
+<script type="text/javascript" src="../../static/js/html2canvas.js"></script>
+<script type="text/javascript" src="../../static/js/info.js"></script>
+
+
+</html>

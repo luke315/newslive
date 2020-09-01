@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        id="vp" />
+    <title>{{title}}-易得资讯</title>
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/index.css">
+    <script src="../../static/js/jquery-1.10.2.js"></script>
+    <script src="../../static/js/iscroll/iscroll-probe.js"></script>
+</head>
+
+<body>
+     <div class="container">
+       
+        <div class="tags"> 
+            {% for key,value in tag_obj.items %}
+               
+                <div id="tag{{key}}" data-index="{{key}}">{{value}}</div>
+            {% endfor %}
+        </div>
+        <div class="list" id="wrapper">
+            <div id="scroller">
+                 <div class="items">
+                     
+                 </div>
+                <div id="pullUp" class="">
+                    <div class="pullUpLabel">加载中...</div>
+                </div>
+            </div>
+        </div>
+     </div> 
+     
+</body>
+<!-- <script type="text/javascript" src="js/config/config.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/swiper/js/swiper.min.js"></script> 
+<script type="text/javascript" src="js/lgyslide/jquery.lgyslide.js"></script> -->
+<script type="text/javascript" src="../../static/js/common.js"></script>
+<script type="text/javascript" src="../../static/js/index.js"></script>
+    
+
+</html>

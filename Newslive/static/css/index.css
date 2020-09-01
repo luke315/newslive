@@ -1,0 +1,129 @@
+.tags{
+    display: flex;
+    align-items: center; 
+    height:50px;
+    overflow: auto;
+
+    background-color: #f4f8fa;
+}
+.tags>div{
+    /* min-width: 70px; */
+    padding:0px 1rem;
+    min-width: fit-content;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.tags>div.active{
+    color:#1062fa;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+ 
+
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    /*上拉下拉背景颜色*/
+    overflow: hidden;
+
+    max-width: 47rem; 
+    left: 49.99999699%;
+    transform:translateX(-50%);
+    -ms-transform:translateX(-50%); 	/* IE 9 */
+    -moz-transform:translateX(-50%); 	/* Firefox */
+    -webkit-transform:translateX(-50%);/* Safari 和 Chrome */
+    -o-transform:translateX(-50%); 	/* Opera */
+    flex:1;
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+#scroller .items{
+    /* padding: 1rem; */
+}
+ #scroller .items .item{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 16px;
+    position: relative;
+    padding-left: 1rem;
+    border-left: 1px solid #999999;
+    font-size: 14px;
+}
+#scroller .items .item2{
+    padding: 8px 33px 8px 33px;
+    color:#1062fa;
+    margin-bottom: 8px;
+    background-color: #ebecec;
+}
+#scroller .items .item .spot{
+    width: 10px;
+    height:10px;
+    background-color: #1062fa;
+    border-radius: 50%;
+    position: absolute;
+    top:0px;
+    left:-6px;
+}
+#scroller .items .item .time{
+    width:100%; 
+    color:#999999;
+    line-height: 10px;
+    
+} 
+#scroller .items .item  .content{
+    flex:1;
+    color:#333333;
+    letter-spacing:1px;
+    padding: 10px 0px 25px 0px;
+    
+}
+#scroller .items .item  .content .imgs{
+    margin-top:8px;
+}
+#scroller .items .item  .content .imgs,
+#scroller .items .item  .content .imgs img{
+    width:100%;
+}
+ 
+#pullDown,
+#pullUp,
+.pulldown-tips {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color:#999999;
+}
+
+.pulldown-tips {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+}
